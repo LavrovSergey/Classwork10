@@ -28,28 +28,27 @@ void write(scan_info* mas, int n)
 			mas[i].model[j] = a;
 		}
 		mas[i].model[24] ='\0';
-		while (mas[i].price <0 /*|| !isalpha(mas[i].price)*/)
-		{
-			/*cin.clear(); cin.ignore(10);*/
+		while (mas[i].price <0)
+		{   
 			cout << "Цена: ";
 			cin>>mas[i].price;
 		}
-		while (mas[i].x_size < 0 /*|| !isalpha(mas[i].x_size)*/)
+		while (mas[i].x_size < 0)
 		{
 			cout << "Горизонтальный размер области сканирования: ";
 			cin >> mas[i].x_size;
 		}
-		while (mas[i].y_size < 0 /*|| !isalpha(mas[i].y_size)*/)
+		while (mas[i].y_size < 0)
 		{
 			cout << "Вертикальный размер области сканирования: ";
 			cin >> mas[i].y_size;
 		}
-		while (mas[i].optr < 0 /*|| !isalpha(mas[i].optr)*/)
+		while (mas[i].optr < 0)
 		{
 		    cout << "Оптическое разрешение: ";
 			cin >> mas[i].optr;
 		}
-		while (mas[i].grey < 0 /*|| !isalpha(mas[i].grey)*/)
+		while (mas[i].grey < 0)
 		{
 			cout << "Число градаций серого: ";
 			cin >> mas[i].grey;
