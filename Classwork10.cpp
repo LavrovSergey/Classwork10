@@ -57,7 +57,7 @@ void write(scan_info* mas, int n)
 	}
 
 	cout << endl;
-	ofstream file("scan.doc");
+	ofstream file("scan.txt");
 	for (int i = 0; i < n; ++i) {
 		file.write((char*)& mas[i], sizeof(scan_info));
 	}
@@ -67,7 +67,7 @@ void write(scan_info* mas, int n)
 
 void write_bin(scan_info* mas, int n)
 {
-    ofstream bin("scan.bin");
+	ofstream bin("scanB.txt", ios::binary);
 	bin << n;
 	for (int i = 0; i < n; ++i) 
 	 { 
